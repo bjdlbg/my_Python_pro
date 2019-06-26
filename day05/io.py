@@ -9,5 +9,5 @@ try:
         for i in range(1, 10):
             with open("tmp" + str(i) + ",jpg", mode="wb") as f2:
                 f2.write(content)
-except FileExistsError:
-    print("图片未找到")
+except FileExistsError as e:
+    print("图片未找到",e)
