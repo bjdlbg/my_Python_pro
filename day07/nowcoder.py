@@ -28,22 +28,22 @@ if len(messageAll)>1:
         offer=m.find("div",attrs={"class":"act-company-info send-offer"})
         of=offer.text
 
-        #who are you？
+
         #print(title,recommend,net,exam,face,offer)
-        if title==None or recommend==None or net==None or exam==None:
-            if recommend==None:
-                re="暂未开始"
-            elif net==None:
-                ne="暂未开始"
-            elif exam==None:
-                ex="暂未开始"
-            elif face==None:
-                fa="暂未开始"
-            elif offer==None:
-                of="暂未开始"
-            csv_writer.writerow([title,re,ne,ex,fa,of])
-        else:
-            csv_writer.writerow([title, re, ne, ex, fa, of])
+        # if title!=None or recommend!=None or net!=None or exam!=None:
+        #     csv_writer.writerow([title,re,ne,ex,fa,of])
+        # else:
+        #     if recommend == None:
+        #         re = "暂未开始"
+        #     elif net == None:
+        #         ne = "暂未开始"
+        #     elif exam == None:
+        #         ex = "暂未开始"
+        #     elif face == None:
+        #         fa = "暂未开始"
+        #     elif offer == None:
+        #         of = "暂未开始"
+        #     csv_writer.writerow([title, re, ne, ex, fa, of])
 else:
     print("爬取完毕")
 
